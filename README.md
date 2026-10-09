@@ -1,2 +1,5 @@
-# Tarea-Practica-2---html-y-css-Control-de-versiones
-tarea#2-jueves 8 de octubre- Omar Herrera y Paul Zerpa
+# Tarea Practica#2 De Desarrolo Web.
+Jueves 8 de octubre de 2026
+Grupo 1S3221
+Por los estudiantes: Omar Herrera y Paul Zerpa
+2ndo año de la licenciatura de Ciberseguridad.
