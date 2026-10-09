@@ -1,0 +1,392 @@
+/* ==========================================================
+   Mi Hub Estudiantil 2026 - estilos.css
+   Para personalizar el sitio, cambia solo las variables de :root
+   ========================================================== */
+
+:root {
+    /* Colores */
+    --color-fondo: #f2f5f9;
+    --color-superficie: #ffffff;
+    --color-tinta: #14213d;
+    --color-texto: #2b3445;
+    --color-texto-suave: #5d6b82;
+    --color-acento: #f4a300;
+    --color-acento-oscuro: #c78500;
+    --color-enlace: #1d5fd1;
+    --color-borde: #d8dfeb;
+
+    /* Tamaños base */
+    --fuente-base: 1rem;
+    --ancho-max: 960px;
+    --espacio: 1rem;
+    --radio: 12px;
+    --sombra: 0 4px 14px rgba(20, 33, 61, 0.12);
+    --sombra-hover: 0 8px 22px rgba(20, 33, 61, 0.2);
+
+    /* Tipografía (fuentes del sistema) */
+    --fuente: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* ---------- Base ---------- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: var(--fuente);
+    font-size: var(--fuente-base);
+    line-height: 1.65;
+    color: var(--color-texto);
+    background: var(--color-fondo);
+}
+
+h1, h2, h3 {
+    color: var(--color-tinta);
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin: 0 0 var(--espacio);
+    padding-bottom: 0.4rem;
+    border-bottom: 3px solid var(--color-acento);
+    display: inline-block;
+}
+
+h3 {
+    margin: 0 0 0.4rem;
+    font-size: 1.15rem;
+}
+
+p {
+    margin: 0 0 var(--espacio);
+}
+
+a {
+    color: var(--color-enlace);
+    text-underline-offset: 3px;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: var(--color-acento-oscuro);
+}
+
+:focus-visible {
+    outline: 3px solid var(--color-acento);
+    outline-offset: 2px;
+}
+
+/* ---------- Encabezado y navegación ---------- */
+header {
+    background: var(--color-tinta);
+    color: #fff;
+    padding: 1.5rem var(--espacio) 0;
+    text-align: center;
+    border-bottom: 4px solid var(--color-acento);
+}
+
+header h1 {
+    color: #fff;
+    margin: 0 0 1rem;
+    font-size: 2rem;
+    letter-spacing: 0.5px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+nav a {
+    display: block;
+    padding: 0.6rem 1.4rem;
+    color: #dbe4f5;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 8px 8px 0 0;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+nav a:hover {
+    background: var(--color-acento);
+    color: var(--color-tinta);
+}
+
+/* ---------- Contenido principal ---------- */
+main {
+    flex: 1;
+    width: 100%;
+    max-width: var(--ancho-max);
+    margin: 0 auto;
+    padding: 2rem var(--espacio);
+}
+
+main section {
+    margin-bottom: 2.5rem;
+}
+
+/* ---------- Perfil (index.html) ---------- */
+#perfil {
+    background: var(--color-superficie);
+    border-radius: var(--radio);
+    box-shadow: var(--sombra);
+    padding: 2rem;
+    text-align: center;
+}
+
+#perfil h2 {
+    border-bottom: none;
+    display: block;
+    font-size: 1.9rem;
+    margin-bottom: 0.75rem;
+}
+
+#perfil p {
+    max-width: 65ch;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+.avatar {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid var(--color-acento);
+    box-shadow: var(--sombra);
+    margin-bottom: 1rem;
+}
+
+#intereses ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 0.75rem;
+}
+
+#intereses li {
+    background: var(--color-superficie);
+    border-left: 5px solid var(--color-acento);
+    border-radius: 8px;
+    padding: 0.8rem 1rem;
+    box-shadow: 0 2px 6px rgba(20, 33, 61, 0.08);
+}
+
+.tarjeta-destacada {
+    background: var(--color-tinta);
+    color: #e8eefb;
+    border: 2px solid var(--color-acento);
+    border-radius: var(--radio);
+    box-shadow: var(--sombra);
+    padding: 1.5rem 2rem;
+}
+
+.tarjeta-destacada h2 {
+    color: var(--color-acento);
+    border-bottom: none;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0;
+}
+
+.tarjeta-destacada p {
+    margin: 0;
+}
+
+/* ---------- Recursos (recursos.html) ---------- */
+.contenedor-tarjetas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+}
+
+.tarjeta {
+    flex: 1 1 220px;
+    display: flex;
+    flex-direction: column;
+    background: var(--color-superficie);
+    border: 1px solid var(--color-borde);
+    border-top: 5px solid var(--color-acento);
+    border-radius: var(--radio);
+    box-shadow: var(--sombra);
+    padding: 1.25rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tarjeta:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--sombra-hover);
+}
+
+.tarjeta p {
+    flex: 1;
+    color: var(--color-texto-suave);
+}
+
+.tarjeta a {
+    align-self: flex-start;
+    font-weight: 600;
+}
+
+/* Tabla */
+table {
+    width: 100%;
+    max-width: 520px;
+    border-collapse: collapse;
+    background: var(--color-superficie);
+    border-radius: var(--radio);
+    overflow: hidden;
+    box-shadow: var(--sombra);
+}
+
+th,
+td {
+    padding: 0.8rem 1rem;
+    text-align: left;
+}
+
+th {
+    background: var(--color-tinta);
+    color: #fff;
+}
+
+tbody tr:nth-child(even) {
+    background: #f6f8fc;
+}
+
+tbody tr {
+    transition: background 0.2s ease;
+}
+
+tbody tr:hover {
+    background: #fff3d6;
+}
+
+td {
+    border-top: 1px solid var(--color-borde);
+}
+
+/* Formulario */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    max-width: 480px;
+    background: var(--color-superficie);
+    border-radius: var(--radio);
+    box-shadow: var(--sombra);
+    padding: 1.5rem;
+}
+
+label {
+    font-weight: 600;
+    color: var(--color-tinta);
+}
+
+input,
+textarea {
+    font: inherit;
+    padding: 0.65rem 0.8rem;
+    border: 1px solid var(--color-borde);
+    border-radius: 8px;
+    background: #fbfcfe;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--color-acento);
+    box-shadow: 0 0 0 3px rgba(244, 163, 0, 0.3);
+}
+
+button {
+    margin-top: 0.5rem;
+    font: inherit;
+    font-weight: 700;
+    padding: 0.7rem 1rem;
+    color: var(--color-tinta);
+    background: var(--color-acento);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.1s ease;
+}
+
+button:hover {
+    background: var(--color-acento-oscuro);
+    color: #fff;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* ---------- Pie de página ---------- */
+footer {
+    background: var(--color-tinta);
+    color: #b9c6e0;
+    text-align: center;
+    padding: 1.25rem var(--espacio);
+    border-top: 4px solid var(--color-acento);
+}
+
+footer p {
+    margin: 0;
+}
+
+/* ---------- Clases utilitarias ---------- */
+.centrado {
+    text-align: center;
+}
+
+.contenedor-centrado {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ---------- Responsivo ---------- */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    nav a {
+        padding: 0.5rem 1rem;
+    }
+
+    #perfil {
+        padding: 1.25rem;
+    }
+
+    .contenedor-tarjetas {
+        flex-direction: column;
+    }
+
+    .tarjeta {
+        flex: 1 1 auto;
+    }
+
+    table,
+    form {
+        max-width: 100%;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none !important;
+    }
+}
