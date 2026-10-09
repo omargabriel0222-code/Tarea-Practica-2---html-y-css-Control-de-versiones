@@ -1,2 +1,2 @@
 Link del repositorio para el control de versiones.
-Link aqui:
+Link aqui: https://github.com/omargabriel0222-code/Tarea-Practica-2---html-y-css-Control-de-versiones
